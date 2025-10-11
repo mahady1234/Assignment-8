@@ -53,8 +53,8 @@ const CardDetailsSection = () => {
 
 
         if (existingList) {
-            const isDuplicat = existingList.some(p => p.id === Number(id));
-            if (isDuplicat) {
+            const isDuplicate = existingList.some(p => p.id === Number(id));
+            if (isDuplicate) {
                 notify();
                 return;
             }
