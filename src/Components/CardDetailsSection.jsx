@@ -44,9 +44,9 @@ const CardDetailsSection = () => {
     } = singleData;
 
 
-    const notify = () => toast(`${title}  installed`);
-    const handleAddToInstallList = () => {
 
+    const handleAddToInstallList = () => {
+        let notify = () => toast(`${title}  installed`);
         setInstall(!install)
         let updatedList = []
         const existingList = JSON.parse(localStorage.getItem('installList'))
