@@ -1,4 +1,4 @@
-
+import 'react-toastify/dist/ReactToastify.css';
 import React, { useState } from 'react';
 import { TbFileLike } from "react-icons/tb";
 import { Link, useParams } from 'react-router';
@@ -54,7 +54,10 @@ const CardDetailsSection = () => {
 
         if (existingList) {
             const isDuplicat = existingList.some(p => p.id === Number(id));
-            if (isDuplicat) return notify();
+            if (isDuplicat) {
+                notify();
+                return;
+            }
             updatedList = [...existingList, singleData]
         }
 
