@@ -43,8 +43,10 @@ const CardDetailsSection = () => {
         size, ratings
     } = singleData;
 
+
+    const notify = () => toast(`${title}  installed`);
     const handleAddToInstallList = () => {
-        const notify = () => toast(`${title}  installed`);
+
         setInstall(!install)
         let updatedList = []
         const existingList = JSON.parse(localStorage.getItem('installList'))
